@@ -1,0 +1,82 @@
+/* General styling for dark background */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #3a0d0d, #121212);
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Container to center content and apply fade-in effect */
+.container {
+    text-align: center;
+    opacity: 0;  /* Start invisible */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Logo styling with responsive size */
+.logo {
+    width: 100%;
+    /* max-width: 400px; */
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Styling for the main message with red color and tattoo-style font */
+.main-message {
+    font-size: 2.5rem;
+    color: #FF0054;  /* Red color matching the logo */
+    font-family: 'Permanent Marker', 'Shadows Into Light Two', cursive;
+    animation: pulse 1.5s infinite; /* Pulsating effect */
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1px #FFFFFF;  /* White outline */
+}
+
+/* Styling for sub-message with a smaller font and gentle fade-in */
+.sub-message {
+    font-size: 1.5rem;
+    color: #CCCCCC;
+    font-family: 'Permanent Marker', 'Shadows Into Light Two', cursive;
+    animation: fadeIn 3s ease-in-out forwards;
+    margin-bottom: 20px;
+}
+
+/* Styling for tagline with a bold, impactful look */
+.tagline {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-family: 'Permanent Marker', 'Shadows Into Light Two', cursive;
+    font-weight: bold;
+    animation: slideIn 3s ease-in-out forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Keyframes for slide-in effect */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
